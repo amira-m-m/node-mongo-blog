@@ -11,8 +11,33 @@ router.get('', async (req, res) => {
             title: "Node.js Blog",
             description: "A simple blog app"
         };
-        const data = await Post.find();
-        res.render('index', { locals, data });
+
+        //const data = await Post.find();
+
+        // Pagination
+        const perPage = 4;
+        const page = req.query.page || 1;
+        const data = await Post.aggregate([ { $sort: { createdAt: -1 } } ])
+            .skip(perPage * page - perPage)
+            .limit(perPage)
+            .exec();
+
+        const count = await Post.countDocuments();
+        
+        const totalPages = Math.ceil(count / perPage);
+        const nextPage = parseInt(page) + 1;
+        const hasNextPage = nextPage <= totalPages;
+        const prevPage = parseInt(page) - 1;
+        const hasPrevPage = prevPage > 0;
+
+        res.render('index', { 
+            locals,
+            data,
+            current: page,
+            totalPages: totalPages,
+            nextPage: hasNextPage ? nextPage : null,
+            prevPage: hasPrevPage ? prevPage : null,
+            currentRoute: '/' });
     }
     catch (error) {
         console.error(error);

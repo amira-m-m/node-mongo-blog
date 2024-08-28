@@ -240,14 +240,33 @@ img {
 
 .pagination {
     font-size: 1.1rem;
-    color: var(--gray);
-    text-decoration: none;
     margin-top: 40px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
-.pagination:hover {
+.pagination .prev-page {
+    width: 30%;
+}
+
+.pagination .current-page {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.pagination .next-page {
+    width: 30%;
+    text-align: right;
+}
+
+.pagination a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.pagination a:hover {
     color: var(--black);
+    text-decoration: underline;
 }
 
 .article {

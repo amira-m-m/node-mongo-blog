@@ -7,7 +7,7 @@
 
 <section class="articles">
 
-    <h2 class="articles__heading">Latest Posts</h2>
+    <h2 class="articles__heading">Posts</h2>
 
     <ul class="article-ul">
 
@@ -20,7 +20,25 @@
 
     </ul>
 
-    <a href="#" class="pagination">&lt; View Older Posts</a>
+    <div class="pagination">
+
+        <div class="prev-page">
+            <% if (prevPage !== null) { %>
+                <a href="/?page=<%= prevPage %>">&lt; View Newer Posts</a>
+            <% } %>
+        </div>
+        
+        <div class="current-page">
+            Page <%= current %> of <%= totalPages %>
+        </div>
+
+        <div class="next-page">
+            <% if (nextPage !== null) { %>
+                <a href="/?page=<%= nextPage %>">View Older Posts &gt;</a>
+            <% } %>
+        </div>
+
+    </div>
     
 </section>
     
