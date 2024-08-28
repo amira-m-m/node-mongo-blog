@@ -1,11 +1,16 @@
-<div class="searchBar">
-    <div class=".container">
-        <form action="/search" class="search__form" role="search" method="POST">
+<div id="searchBar">
+    <div class="container">
 
-            <input type="search" aria-label="search" id="searchInput" name="searchTerm" placeholder="Search the site..." />
+        <div class="searchInside">
+            <div class="searchField">
+                <form action="/search" class="search__form" role="search" method="POST">
+                    <input type="search" aria-label="search" id="searchInput" name="searchTerm" placeholder="Search the site..." />
+                </form>
+            </div>
+            <div id="searchClose">
+                <ion-icon name="close-outline"></ion-icon>
+        </div>
+        </div>
 
-        </form>
-
-        <div id="searchClose">Close</div>
     </div>
 </div>
