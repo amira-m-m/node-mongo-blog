@@ -45,11 +45,19 @@ router.get('', async (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('about');
+    locals = {
+      title: "About Node.js Blog",
+      description: "About page within a simple blog app"
+    };
+    res.render('about', {locals});
 });
 
 router.get('/contact', (req, res) => {
-    res.render('contact');
+  locals = {
+    title: "Contact Node.js Blog",
+    description: "Contact page within a simple blog app"
+  };
+    res.render('contact', {locals});
 });
 
 router.get('/post/:id', async (req, res) => {
