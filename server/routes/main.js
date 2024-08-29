@@ -8,7 +8,7 @@ router.get('', async (req, res) => {
 
     try {
         locals = {
-            title: "Node.js Blog",
+            title: "Welcome to Jane Doe's Blog",
             description: "A simple blog app"
         };
 
@@ -46,7 +46,7 @@ router.get('', async (req, res) => {
 
 router.get('/about', (req, res) => {
     locals = {
-      title: "About Node.js Blog",
+      title: "About Jane Doe",
       description: "About page within a simple blog app"
     };
     res.render('about', {locals});
@@ -54,7 +54,7 @@ router.get('/about', (req, res) => {
 
 router.get('/contact', (req, res) => {
   locals = {
-    title: "Contact Node.js Blog",
+    title: "Contact Jane Doe",
     description: "Contact page within a simple blog app"
   };
     res.render('contact', {locals});
@@ -79,7 +79,7 @@ router.get('/post/:id', async (req, res) => {
 router.post('/search', async (req, res) => {
     try {
       const locals = {
-        title: "Search",
+        title: "Search Blog Posts",
         description: "Search results within a simple blog app"
       }
   
