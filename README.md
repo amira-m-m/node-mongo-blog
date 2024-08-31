@@ -13,9 +13,27 @@ This simple blog app was adapted from a technology tutorial created by [Net Ninj
 
 ## Instructions
 
+### Set up a new database
+
+- Create a new MongoDB database and collection named `test` and `posts` respectively.
+- Create a user with read-write permissions and obtain connection string.
+
+### Set up project locally
+
 - Clone the project to your local system.
 - Use a terminal to navigate to the project root folder.
 - Run `npm install` to install dependencies.
+
+### Initialize data in database
+
+- Create a `.env` file in the root folder.
+- Paste `MONGODB_URI=<CONNECTIONSTRING>` into `.env`, replacing `<CONNECTIONSTRING>` with your MongoDB user's connection string.
+- Use a terminal to navigate to `server/config`.
+- Run `node initializedb.js` to initialize the database with dummy blog posts.
+
+### Run project
+
+- Use a terminal to navigate to the project root folder.
 - Run node `app.js` to initialize a local server.
 - Open [localhost:5000](localhost:5000).
 
