@@ -19,3 +19,7 @@ This simple blog app was adapted from a technology tutorial created by [Net Ninj
 - Run node `app.js` to initialize a local server.
 - Open [localhost:5000](localhost:5000).
 
+## Credits
+
+- Hero image (index page) by [Christin Hume](https://unsplash.com/@christinhumephoto)
+- Portrait image (about page) by [Stefan Stefancik](https://unsplash.com/@cikstefan)
