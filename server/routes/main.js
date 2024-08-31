@@ -15,7 +15,7 @@ router.get('', async (req, res) => {
         //const data = await Post.find();
 
         // Pagination
-        const perPage = 4;
+        const perPage = 5;
         const page = req.query.page || 1;
         const data = await Post.aggregate([ { $sort: { createdAt: -1 } } ])
             .skip(perPage * page - perPage)
