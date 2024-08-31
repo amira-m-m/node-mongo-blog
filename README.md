@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This simple blog app was adapted from a technology tutorial created by [Net Ninja](https://netninja.dev/). It is coded using Node.js and Express JS, and presents data stored in a MongoDB database. A dynamic page routing system is used to contruct URLs and render the data of individual blog posts.
+This simple blog app was adapted from a technology tutorial created by [Net Ninja](https://netninja.dev/). It is coded using Node.js and Express JS, and presents data stored in a MongoDB database. A dynamic page routing system is used to construct URLs and render the data of individual blog posts.
 
 ## Features
 
